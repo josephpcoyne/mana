@@ -2,6 +2,7 @@ import Vue from "vue";
 import Vuex from "vuex";
 import App from "./App.vue";
 import router from "./router";
+import axios from "axios";
 import "es6-promise/auto";
 Vue.config.productionTip = false;
 

@@ -1,0 +1,32 @@
+body {
+  background-color: #f5f6f8;
+}
+
+.card {
+  width: 20%;
+  transition: 0.3s;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: white;
+  border-radius: 15px;
+  padding: 2px, 15px;
+  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.05);
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.card-title {
+  text-align: center;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 8px;
+  color: #a5aeba;
+  padding: 10px 20px;
+}
+.card-body {
+  font-family: "Lexend Deca", sans-serif;
+}
+.card-body p {
+  color: #a5aeba;
+}
+.card-body h1 {
+  color: black;
+}
