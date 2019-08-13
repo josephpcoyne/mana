@@ -21,6 +21,6 @@ import TodoPrimaryPanel from '@/components/TodoPrimaryPanel.vue';
   }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>

@@ -63,7 +63,7 @@
   margin: 0 auto;
   padding: 30px 20px;
   width: 20%;
-  height: 800px;
+  height: 690px;
 }
 .title {
   margin-top: 20%;
