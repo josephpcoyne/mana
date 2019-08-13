@@ -43,6 +43,7 @@
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.05);
   margin: 0 auto;
   padding: 30px 20px;
+  height: 800px;
   /* padding: 15px, 20px; */
 }
 
@@ -62,6 +63,7 @@ i::before {
   color:  #32c0fb;
 }
 .selected {  
+  margin: 0 auto;
   color: #32c0fb;
   background-color: #e0f6ff;
   border-radius: 10px;
