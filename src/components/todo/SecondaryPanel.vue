@@ -48,6 +48,9 @@
 </script>
 
 <style scoped>
+.title {
+  font-family: 'Nunito', sans-serif;
+}
 .content {
   display: flex;
   flex-direction: column;
@@ -63,7 +66,7 @@
   margin: 0 auto;
   padding: 30px 20px;
   width: 20%;
-  height: 690px;
+  height: 91.5vh;
 }
 .title {
   margin-top: 20%;
@@ -85,6 +88,7 @@
 li i {
   color: #a5aeba;
   padding: 10px;
+  padding-left: 20px;
 }
 .task-count {
   font-size: 14px;
@@ -101,6 +105,9 @@ li i {
 .options {
   margin-right: 4%;
   float: right;
+}
+.options:hover {
+  color: #32c0fb;
 }
 .add-project {
   float: right;

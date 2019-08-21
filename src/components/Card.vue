@@ -1,56 +1,67 @@
 <template>
   <div class="card">
-    <div class="card-title">
-      <h1>Favorite champion <i class="fas fa-ellipsis-h options"></i></h1>
-    </div>
+    <i class="fas fa-ellipsis-h options"></i>
+    <br>
     <div class="card-body">
-      <h1>Gnar!</h1>
-      <p>He is the best.</p>
+      <li v-for="item in Items">
+        <i class="fas fa-square" v-if="!item.completed"></i>
+        <i class="fas fa-check-square" v-else></i>{{item.title}}
+      </li>
     </div>
   </div>
 </template>
 
 <script>
   export default {
-    
+    props: {
+      Items: {
+        type: Array, 
+      },
+    },
+    data() {
+      return {
+      }
+    },
   }
 </script>
 
 <style scoped>
 .card {
-  align-self: flex-start; 
   height: auto;
   transition: 0.3s;
   font-family: "Lexend Deca", sans-serif;
   background-color: white;
   border-radius: 15px;
-  padding: 2px, 15px;
+  padding: 25px 25px;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.05);
-  padding: 20px;
-  margin: 100px 40px;
+  /* padding: 20px 5px; */
+  margin-top: 80%;
 }
 .card:hover {
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
 }
-.card-title {
-  /* text-align: center; */
+li {
+  list-style-type: none;
+}
+li i {
+  color: #a5aeba;
+  padding: 10px;
+  padding-left: 20px;
+}
+/* .card-title {
   font-family: "Lexend Deca", sans-serif;
   font-size: 8px;
   color: #a5aeba;
-  padding: 10px 20px;
-}
+  padding: 5px 10px;
+} */
 .card-body {
+  margin-left: -10%;
   font-family: "Lexend Deca", sans-serif;
-  padding: 10px 20px;
-}
-.card-body p {
-  color: #a5aeba;
-}
-.card-body h1 {
-  color: black;
+  /* padding: 5px 20px; */
 }
 .options {
-  padding-left: 20px;
+  float: right;
+  color: #a5aeba;
 }
 .options:hover {
   color: #32c0fb;

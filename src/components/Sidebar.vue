@@ -41,10 +41,8 @@
   background-color: white;
   border-radius: 10px 0 0 10px;
   box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.05);
-  margin: 0 auto;
   padding: 30px 20px;
-  height: 690px;
-  /* padding: 15px, 20px; */
+  height: 91.5vh;
 }
 
 .toggle {
