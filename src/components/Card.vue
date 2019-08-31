@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <!-- <div class="card">
     <i class="fas fa-ellipsis-h options"></i>
     <br>
     <div class="card-body">
@@ -7,6 +7,15 @@
         <i class="fas fa-square" v-if="!item.completed"></i>
         <i class="fas fa-check-square" v-else></i>{{item.title}}
       </li>
+    </div>
+  </div> -->
+  <div class="flex mx-auto p-6  bg-white max-w-xs rounded-lg shadow-lg">
+    <div class="flex-shrink-0">
+      <p class="h-12 w-12">Logo</p>
+    </div>
+    <div class="ml-6 pt-1">
+      <h4 class="text-xl text-gray-900 leading-tight">Title</h4>
+      <p class="text-base text-gray-600 leading-normal">Body Text Goes Here!</p>
     </div>
   </div>
 </template>
@@ -26,45 +35,5 @@
 </script>
 
 <style scoped>
-.card {
-  height: auto;
-  transition: 0.3s;
-  font-family: "Lexend Deca", sans-serif;
-  background-color: white;
-  border-radius: 15px;
-  padding: 25px 25px;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.05);
-  /* padding: 20px 5px; */
-  margin-top: 80%;
-}
-.card:hover {
-  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-}
-li {
-  list-style-type: none;
-}
-li i {
-  color: #a5aeba;
-  padding: 10px;
-  padding-left: 20px;
-}
-/* .card-title {
-  font-family: "Lexend Deca", sans-serif;
-  font-size: 8px;
-  color: #a5aeba;
-  padding: 5px 10px;
-} */
-.card-body {
-  margin-left: -10%;
-  font-family: "Lexend Deca", sans-serif;
-  /* padding: 5px 20px; */
-}
-.options {
-  float: right;
-  color: #a5aeba;
-}
-.options:hover {
-  color: #32c0fb;
-}
 
 </style>

@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <Sidebar />
+    <SecondaryPanel />
     <router-view/>
   </div>
 </template>
@@ -14,10 +15,12 @@
 
 <script>
 import Sidebar from '@/components/Sidebar.vue';
+import SecondaryPanel from '@/components/SecondaryPanel.vue';
 
 export default {
   components: {
     Sidebar,
+    SecondaryPanel
   },
 }
 </script>

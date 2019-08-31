@@ -2,7 +2,7 @@
   <div class="content">
     <p></p>
     
-    <!-- <Card /> -->
+    <Card />
   </div>
 </template>
 

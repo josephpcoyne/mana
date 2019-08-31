@@ -1,5 +1,5 @@
 <template>
-  <div class="sidebar">
+  <!-- <div class="sidebar">
 
     <i class="fas toggle fa-bars"></i>
     
@@ -15,6 +15,41 @@
     <i class="fas menu fa-file" @click="activate(7)" :class="{ selected : active_el == 7 }"></i>
     <i class="fas menu fa-comments" @click="activate(8)" :class="{ selected : active_el == 8 }"></i>
     <i class="fas menu fa-cog" @click="activate(9)" :class="{ selected : active_el == 9 }"></i>
+  </div> -->
+  <div class="flex p-5 bg-white float-left h-screen rounded-l-lg">
+      <div class="flex flex-col items-center">
+        <i class="fas fa-bars m-5"></i>
+        <router-link to='/email'>
+          <i class="fas fa-envelope-open m-5 text-gray-500"></i>
+        </router-link>
+        <router-link to='/games'>
+        <i class="fas fa-gamepad m-5 text-gray-500"></i>
+        </router-link>
+        
+        <router-link to='/todo'>
+        <i class="fas fa-list-alt m-5 text-gray-500"></i>
+        </router-link>
+
+        <router-link to='/calendar'>        
+        <i class="fas fa-calendar-alt m-5 text-gray-500"></i>
+        </router-link>
+        
+        <router-link to='/scheduler'>      
+        <i class="fas fa-clock m-5 text-gray-500"></i>
+        </router-link>
+        
+        <router-link to='/cloud'>        
+        <i class="fas fa-file m-5 text-gray-500"></i>
+        </router-link>
+        
+        <router-link to='/chat'>
+        <i class="fas fa-comments m-5 text-gray-500"></i>
+        </router-link>
+        
+        <router-link to='/settings'>        
+        <i class="fas fa-cog m-5 text-gray-500"></i>
+        </router-link>        
+      </div>
   </div>
 </template>
 
@@ -34,38 +69,16 @@
 </script>
 
 <style scoped>
-.sidebar {
-  display: flex;
-  flex-direction: column;
-  float: left;
-  background-color: white;
-  border-radius: 10px 0 0 10px;
-  box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.05);
-  padding: 30px 20px;
-  height: 91.5vh;
-}
-
-.toggle {
-  margin: 0 auto;
-  padding: 5px 10px 30px 15px;
-}
-i::before {
-  cursor: pointer;
-}
-.menu {
-  margin: 0 auto;
-  color: #a5aeba;
-  padding: 15px 15px; 
-}
-.menu:hover {
+.fas:hover {
   color:  #32c0fb;
 }
-.selected {  
-  margin: 0 auto;
-  color: #32c0fb;
+.router-link-exact-active {
   background-color: #e0f6ff;
   border-radius: 10px;
   animation: createBox .25s;
+}
+.router-link-exact-active i {
+  color: #32c0fb;
 }
 @keyframes createBox {
   from {
