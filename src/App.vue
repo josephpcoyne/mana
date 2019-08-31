@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <Sidebar />
-    <SecondaryPanel />
     <router-view/>
   </div>
 </template>

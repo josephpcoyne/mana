@@ -1,21 +1,4 @@
 <template>
-  <!-- <div class="sidebar">
-
-    <i class="fas toggle fa-bars"></i>
-    
-    <router-link to='/email'>
-    <i class="fas menu fa-envelope-open" @click="activate(2)" :class="{ selected : active_el == 2 }"></i>
-    </router-link>
-    <i class="fas menu fa-gamepad" @click="activate(3)" :class="{ selected : active_el == 3 }"></i>
-    <router-link to='/todo'>
-    <i class="fas menu fa-list-alt" @click="activate(4)" :class="{ selected : active_el == 4 }"></i>
-    </router-link>
-    <i class="fas menu fa-calendar-alt" @click="activate(5)" :class="{ selected : active_el == 5 }"></i>
-    <i class="fas menu fa-clock" @click="activate(6)" :class="{ selected : active_el == 6 }"></i>
-    <i class="fas menu fa-file" @click="activate(7)" :class="{ selected : active_el == 7 }"></i>
-    <i class="fas menu fa-comments" @click="activate(8)" :class="{ selected : active_el == 8 }"></i>
-    <i class="fas menu fa-cog" @click="activate(9)" :class="{ selected : active_el == 9 }"></i>
-  </div> -->
   <div class="flex p-5 bg-white float-left h-screen rounded-l-lg">
       <div class="flex flex-col items-center">
         <i class="fas fa-bars m-5"></i>

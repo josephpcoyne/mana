@@ -1,12 +1,12 @@
 <template>
-  <div class="main">
-    <!-- <Search /> -->
+  <div class="flex content-start flex-wrap bg-gray-100 h-screen rounded-r-lg">
     <TopBar />
-    <div class="content">
-    <div class="column" v-for="column of board.columns">
-      
+    
+    <div class="flex p-6" v-for="item in items">
+      <Card :title="item.title" :completed="item.completed" />
     </div>
-    </div>
+   
+
   </div>
 </template>
 
@@ -47,13 +47,13 @@ export default {
 </script>
 
 <style scoped>
-.main {
+/* .main {
   display: flex;
-  /* flex-direction: row; */
+
   background-color: #f5f6f8;
-  /* width: 100%; */
+
   height: 99.4vh;
   box-shadow: 0 3px 4px -2px rgba(0, 0, 0, 0.05);
   border-radius: 0 10px 10px 0;
-}
+} */
 </style>
