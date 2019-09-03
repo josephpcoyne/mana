@@ -1,21 +1,30 @@
 <template>
-  <div class="bg-white h-screen flex float-left border-l-2 border-gray-200">
-    <div class="flex w-56">
+  <div class="bg-white h-screen float-left border-l border-gray-200 w-1/5">
+    <div class="flex">
       <div class="flex-auto p-6 mt-8">
-        <span class="text-2xl">{{pageTitle}}</span>
+        <span class="text-xl">Projects {{projects.length}}</span>
         <i class="fas fa-plus text-gray-500 text-2xl p-1 float-right pt-1 cursor-pointer hover:text-mana-200"></i>  
       </div>
     </div>
+    <div class="flex p-6 mt-8">
+      <h5 class="text-2xl">Projects</h5>
+    </div>
+    <div v-for="project in projects" :class="{active:project.id == selected}" @click="selected = project.id">
+        
+      <button class="max-w-sm mx-auto flex p-3 focus:bg-gray-200 focus:outline-none w-30 rounded-full py-2 px-4">
+        <div class="flex-shrink-0">
+          <img class="h-12 w-12" src="@/assets/mp1.png" alt="Project Icon">
+        </div>
+        
+        <div class="ml-6 pt-1">
+          <span class="text-base text-gray-900 leading-tight">{{project.title}}</span>
+          <i class="fas fa-ellipsis-h text-gray-500 m-2 pl-4 float-right" v-if="selected == project.id"></i>
+          
+          <p class="text-sm text-gray-600 leading-normal">{{project.tasks}} tasks</p>
+        </div>
+      </button>
+    </div>
     
-    <!-- <h5 class="subtitle">Projects {{projects.length}}</h5>
-    <ul class="items">
-      <li class="item" v-for="project in projects" :class="{active:project.id == selected}" @click="selected = project.id">
-        <i class="fas fa-check-square"></i>
-        {{project.title}} <i class="fas fa-ellipsis-h options" v-if="selected == project.id"></i>
-        <br />
-        <span class="task-count">{{project.tasks}} tasks</span>
-      </li>
-    </ul> -->
   </div>
 </template>
 
@@ -53,5 +62,7 @@
 </script>
 
 <style scoped>
-/*  */
+.selected {
+ bac
+}
 </style>

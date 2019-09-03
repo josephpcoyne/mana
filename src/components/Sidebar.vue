@@ -1,8 +1,8 @@
 <template>
   <div class="flex p-5 bg-white float-left h-screen rounded-l-lg">
       <div class="flex flex-col items-center">
-        <i class="fas fa-bars m-5"></i>
-        <router-link to='/email'>
+        <i class="fas fa-bars m-5 mb-6"></i>
+        <router-link to='/email' class="mt-6">
           <i class="fas fa-envelope-open m-5 text-gray-500"></i>
         </router-link>
         <router-link to='/games'>
