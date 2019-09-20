@@ -40,20 +40,22 @@
   export default {
     data() {
       return {
-        active_el: 0
-      }
-    },
-    methods:{
-      activate:function(el){
-        this.active_el = el;
       }
     },
   };
 </script>
 
 <style scoped>
+.fa-bars { 
+  transform: scale(1.3,1);
+  cursor: pointer;
+  }
 .fas:hover {
   color:  #32c0fb;
+  cursor: pointer;
+}
+a {
+  cursor: default;
 }
 .router-link-exact-active {
   background-color: #e0f6ff;

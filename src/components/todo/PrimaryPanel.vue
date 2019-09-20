@@ -5,7 +5,6 @@
     <div class="flex p-6 h-40" v-for="item in items">
       <Card :title="item.title" :completed="item.completed" />
     </div>
-    
     <div class="flex p-6">
       <div class="container mx-auto py-10">
         <div class=" border border-gray-400 m-6 rounded-lg bg-gray-200 mx-auto max-w-sm rounded-lg overflow-hidden">

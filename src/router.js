@@ -9,6 +9,8 @@ import Scheduler from "./views/Scheduler.vue";
 import Cloud from "./views/Cloud.vue";
 import Chat from "./views/Chat.vue";
 import Settings from "./views/Settings.vue";
+import Inbox from "./views/email/Inbox.vue";
+import Starred from "./views/email/Starred.vue";
 
 Vue.use(Router);
 
@@ -23,8 +25,22 @@ export default new Router({
     },
     {
       path: "/email",
-      name: "email",
-      component: Email
+      // name: "email",
+      component: Email,
+      children: [
+        {
+          path: "inbox",
+          alias: "/inbox",
+          name: "Inbox",
+          component: Inbox
+        },
+        {
+          path: "starred",
+          alias: "/starred",
+          name: "starred",
+          component: Starred
+        }
+      ]
     },
     {
       path: "/games",

@@ -1,23 +1,19 @@
 <template>
-  <div>
-    <SidePanel />
+  <div class="flex content-start flex-wrap bg-gray-100 h-screen rounded-r-lg">
     <TopBar />
-    
-    
+    Starred
   </div>
 </template>
 
 <script>
-import SidePanel from '@/components/chat/SidePanel.vue';
 import TopBar from '@/components/TopBar.vue';
   export default {
     components: {
-      SidePanel,
       TopBar,
     },
   }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>
