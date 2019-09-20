@@ -4,6 +4,7 @@
     <span class="logo flex p-6 text-mana-200 text-2xl">mana</span>
     <div class="p-6"> 
       <router-link to="/inbox"><i class="fas fa-inbox m-3"></i>Inbox</router-link>
+      <br>
       <router-link to="/starred"><i class="fas fa-star m-3"></i>Starred</router-link>
       <li><i class="fas fa-clock m-3"></i>Snoozed</li>
       <li><i class="fas fa-paper-plane m-3" ></i>Sent</li>
