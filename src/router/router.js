@@ -15,7 +15,8 @@ Vue.use(Router);
 
 export default new Router({
   mode: "history",
-  linkActiveClass: "selected",
+  // linkActiveClass: "selected",
+  // linkExactActiveClass: "selected",
   routes: [
     CalendarRoutes,
     ChatRoutes,

@@ -2,7 +2,7 @@
   <div class="top-bar">
     <div class="search-bar">
       <i class="fas fa-search search"></i> 
-      <input type="text" placeholder="Search..."class="search-form"></input>
+      <input type="text" placeholder="Search..." class="search-form"></input>
     </div>
     <div class="user-info">
       <i class="fas fa-bell notification-icon"></i>

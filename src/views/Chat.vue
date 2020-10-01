@@ -2,8 +2,6 @@
   <div>
     <SidePanel />
     <TopBar />
-    
-    
   </div>
 </template>
 
@@ -18,6 +16,6 @@ import TopBar from '@/components/TopBar.vue';
   }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>

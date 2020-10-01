@@ -13,6 +13,6 @@ import SidePanel from '@/components/settings/SidePanel.vue';
   }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>

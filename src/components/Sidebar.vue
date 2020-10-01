@@ -1,47 +1,49 @@
 <template>
   <div class="flex p-5 bg-white float-left h-screen rounded-l-lg">
-      <div class="flex flex-col items-center">
-        <i class="fas fa-bars m-5 mb-6"></i>
-        <router-link to='/email' class="mt-6">
-          <i class="fas fa-envelope-open m-5 text-gray-500"></i>
-        </router-link>
-        <router-link to='/games'>
-        <i class="fas fa-gamepad m-5 text-gray-500"></i>
-        </router-link>
-        
-        <router-link to='/todo'>
-        <i class="fas fa-list-alt m-5 text-gray-500"></i>
-        </router-link>
-
-        <router-link to='/calendar'>        
-        <i class="fas fa-calendar-alt m-5 text-gray-500"></i>
-        </router-link>
-        
-        <router-link to='/scheduler'>      
-        <i class="fas fa-clock m-5 text-gray-500"></i>
-        </router-link>
-        
-        <router-link to='/cloud'>        
-        <i class="fas fa-file m-5 text-gray-500"></i>
-        </router-link>
-        
-        <router-link to='/chat'>
-        <i class="fas fa-comments m-5 text-gray-500"></i>
-        </router-link>
-        
-        <router-link to='/settings'>        
-        <i class="fas fa-cog m-5 text-gray-500"></i>
-        </router-link>        
-      </div>
+    <div class="flex flex-col items-center">
+      <i class="fas fa-bars m-4 p-1 mb-6 pb-6" ></i>
+    
+      <router-link :to="{ name: 'email' }" class="tab grow">
+        <i class="p-3 m-3 fas fw fa-envelope-open text-gray-500 z-10"></i>
+      </router-link>
+      <router-link :to="{ name: 'games' }"
+        class="p-3 m-3 fas fw fa-gamepad text-gray-500" 
+        tag="i">
+      </router-link>
+      <router-link :to="{ name: 'todo' }"
+        class="p-3 m-3 fas fw fa-list-alt text-gray-500" 
+        tag="i">
+      </router-link>
+      <router-link :to="{ name: 'calendar' }"     
+        class="p-3 m-3 fas fw fa-calendar-alt text-gray-500" 
+        tag="i">
+      </router-link>
+      <router-link :to="{ name: 'scheduler' }"   
+        class="p-3 m-3 fas fw fa-clock text-gray-500" 
+        tag="i">
+      </router-link>
+      <router-link :to="{ name: 'cloud' }"   
+        class="p-3 m-3 fas fw fa-file text-gray-500" 
+        tag="i">
+      </router-link>
+      <router-link :to="{ name: 'chat' }"
+        class="p-3 m-3 fas fw fa-comments text-gray-500" 
+        tag="i">
+      </router-link>
+      <router-link :to="{ name: 'settings' }"     
+        class="p-3 m-3 fas fw fa-cog text-gray-500" 
+        tag="i">
+      </router-link>   
+    </div>
   </div>
 </template>
 
 <script>
   export default {
     data() {
-      return {
-      }
     },
+    methods: {
+    }
   };
 </script>
 
@@ -54,23 +56,46 @@
   color:  #32c0fb;
   cursor: pointer;
 }
+i {
+  z-index: 10;
+  position: relative;
+}
 a {
   cursor: default;
 }
-.router-link-exact-active {
-  background-color: #e0f6ff;
-  border-radius: 10px;
-  animation: createBox .25s;
+.router-link-exact-active .grow:before{ 
+  transform: scale(2);
+  
 }
-.router-link-exact-active i {
+.router-link-exact-active i{
   color: #32c0fb;
 }
-@keyframes createBox {
+.tab {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  transform-origin: 0 0;
+  transition: all 2s;
+}
+.tab:before{
+  content: "";
+  background-color: #e0f6ff;
+  /* border-radius: 10px; */
+  width: 15px;
+  height: 15px;
+  z-index: 1;
+  position: absolute;
+  transform-origin: 0 0;
+  transition: all 2s;
+}
+
+/* @keyframes grow {
   from {
     transform: scale(0);
   }
   to {
-    transform: scale(1);
   }
-}
+} */
+
+
 </style>

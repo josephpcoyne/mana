@@ -19,3 +19,11 @@ body {
     url("fonts/lineto-circular-pro-book.ttf") format("truetype"),
     url("fonts/lineto-circular-pro-book.svg#Circular Book") format("svg");
 }
+@keyframes createBox {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
