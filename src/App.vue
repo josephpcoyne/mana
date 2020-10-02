@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <Sidebar />
+    <NavBar @send-tab="sentTab"/>
+    <SidePanel :is="currentTab"/>
     <router-view/>
   </div>
 </template>
@@ -10,11 +11,27 @@
 </style>
 
 <script>
-import Sidebar from '@/components/Sidebar.vue';
+  import NavBar from '@/components/NavBar.vue';
+	import SidePanel from '@/components/SidePanel.vue';
+	import Email from '@/views/Email.vue';
+	import Games from '@/views/Games.vue';
 
-export default {
-  components: {
-    Sidebar,
-  },
-}
+  export default {
+    components: {
+      NavBar,
+			SidePanel,
+			Email,
+			Games
+		},
+		data() {
+			return {
+				currentTab: "home",
+			}
+		},
+		methods: {
+			sentTab(e) {
+				this.currentTab = e.toLowerCase()
+			}
+		}
+  }
 </script>

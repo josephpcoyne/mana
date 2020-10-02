@@ -9,6 +9,7 @@
 import SecondaryPanel from '@/components/todo/SecondaryPanel.vue';
 import PrimaryPanel from '@/components/todo/PrimaryPanel.vue';
   export default {
+    name: "Todo",
     components: {
       SecondaryPanel,
       PrimaryPanel

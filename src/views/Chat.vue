@@ -9,6 +9,7 @@
 import ChatSidePanel from '@/components/chat/ChatSidePanel.vue';
 import TopBar from '@/components/TopBar.vue';
   export default {
+    name: "Chat",
     components: {
       ChatSidePanel,
       TopBar,

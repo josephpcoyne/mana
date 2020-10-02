@@ -8,7 +8,7 @@ export default {
   component: Email,
   children: [
     {
-      path: "/inbox",
+      path: "inbox",
       alias: "/inbox",
       name: "Inbox",
       component: Inbox
