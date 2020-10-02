@@ -1,35 +1,35 @@
 <template>
-  <div class="flex p-5 bg-white float-left h-screen rounded-l-lg">
-      <div class="flex flex-col items-center">
-        <i class="fas fa-bars m-5 mb-6"></i>
-        <router-link to='/email' class="mt-6">
+  <div class="flex p-3 bg-white md:float-left h-screen rounded-l-lg">
+      <div class="md:flex md:flex-col md:items-center sm:flex-row sm:items-end">
+        <i class="fas fa-bars m-5 mb-6 hidden md:block"></i>
+        <router-link exact to='/email'>
           <i class="fas fa-envelope-open m-5 text-gray-500"></i>
         </router-link>
-        <router-link to='/games'>
+        <router-link exact to='/games'>
         <i class="fas fa-gamepad m-5 text-gray-500"></i>
         </router-link>
         
-        <router-link to='/todo'>
+        <router-link exact to='/todo'>
         <i class="fas fa-list-alt m-5 text-gray-500"></i>
         </router-link>
 
-        <router-link to='/calendar'>        
+        <router-link exact to='/calendar'>        
         <i class="fas fa-calendar-alt m-5 text-gray-500"></i>
         </router-link>
         
-        <router-link to='/scheduler'>      
+        <router-link exact to='/scheduler'>      
         <i class="fas fa-clock m-5 text-gray-500"></i>
         </router-link>
         
-        <router-link to='/cloud'>        
+        <router-link exact to='/cloud'>        
         <i class="fas fa-file m-5 text-gray-500"></i>
         </router-link>
         
-        <router-link to='/chat'>
+        <router-link exact to='/chat'>
         <i class="fas fa-comments m-5 text-gray-500"></i>
         </router-link>
         
-        <router-link to='/settings'>        
+        <router-link exact to='/settings'>        
         <i class="fas fa-cog m-5 text-gray-500"></i>
         </router-link>        
       </div>
@@ -61,9 +61,8 @@ a {
   background-color: #e0f6ff;
   border-radius: 10px;
   animation: createBox .25s;
-}
-.router-link-exact-active i {
   color: #32c0fb;
+
 }
 @keyframes createBox {
   from {
@@ -73,4 +72,5 @@ a {
     transform: scale(1);
   }
 }
+
 </style>

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SidePanel />
+    <ChatSidePanel :people="people"/>
     <TopBar />
     
     
@@ -8,16 +8,26 @@
 </template>
 
 <script>
-import SidePanel from '@/components/chat/SidePanel.vue';
+import ChatSidePanel from '@/components/chat/ChatSidePanel.vue';
 import TopBar from '@/components/TopBar.vue';
   export default {
     components: {
-      SidePanel,
+      ChatSidePanel,
       TopBar,
+    },
+    data() {
+      return {
+        people: [
+          { id: 1, name: "Justin Baker" },
+          { id: 2, name: "Sean Hass" }, 
+          { id: 3, name: "Micah Castaneda" }
+          ]
+      }
     },
   }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
+
 
 </style>

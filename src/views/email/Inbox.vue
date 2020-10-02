@@ -1,15 +1,17 @@
 <template>
   <div class="flex content-start flex-wrap bg-gray-100 h-screen rounded-r-lg">
     <TopBar />
-    INBOXXXXXX
+    <MainPanel />
   </div>
 </template>
 
 <script>
 import TopBar from '@/components/TopBar.vue';
+import MainPanel from '@/components/email/MainPanel.vue';
   export default {
     components: {
       TopBar,
+      MainPanel
     },
   }
 </script>

@@ -4,7 +4,7 @@
     
     <h5 class="subtitle">Projects {{projects.length}}</h5>
     <ul class="items">
-      <li class="item" v-for="project in projects" :class="{active:project.id == selected}" @click="selected = project.id">
+      <li class="item" v-for="project in projects" :key="project.id" :class="{active:project.id == selected}" @click="selected = project.id">
         <i class="fas fa-check-square"></i>
         {{project.title}} <i class="fas fa-ellipsis-h options" v-if="selected == project.id"></i>
         <br />

@@ -2,7 +2,7 @@
   <div class="flex content-start flex-wrap bg-gray-100 h-screen rounded-r-lg">
     <TopBar />
     
-    <div class="flex p-6 h-40" v-for="item in items">
+    <div class="flex p-6 h-40" v-for="item in items" :key="item.id">
       <Card :title="item.title" :completed="item.completed" />
     </div>
     <div class="flex p-6">

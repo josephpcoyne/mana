@@ -8,7 +8,10 @@ module.exports = {
         }
       }
     },
-    variants: {},
+    variants: {
+      boxShadow: ['responsive', 'hover', 'focus', 'active'],
+      backgroundColor: ['responsive', 'hover', 'focus', 'active']
+    },
     plugins: []
   }
 };
