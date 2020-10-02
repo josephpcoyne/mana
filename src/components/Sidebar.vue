@@ -1,40 +1,38 @@
 <template>
-  <div class="flex p-5 bg-white float-left h-screen rounded-l-lg">
-    <div class="flex flex-col items-center">
-      <i class="fas fa-bars m-4 p-1 mb-6 pb-6" ></i>
-    
-      <router-link :to="{ name: 'email' }" class="tab grow">
-        <i class="p-3 m-3 fas fw fa-envelope-open text-gray-500 z-10"></i>
-      </router-link>
-      <router-link :to="{ name: 'games' }"
-        class="p-3 m-3 fas fw fa-gamepad text-gray-500" 
-        tag="i">
-      </router-link>
-      <router-link :to="{ name: 'todo' }"
-        class="p-3 m-3 fas fw fa-list-alt text-gray-500" 
-        tag="i">
-      </router-link>
-      <router-link :to="{ name: 'calendar' }"     
-        class="p-3 m-3 fas fw fa-calendar-alt text-gray-500" 
-        tag="i">
-      </router-link>
-      <router-link :to="{ name: 'scheduler' }"   
-        class="p-3 m-3 fas fw fa-clock text-gray-500" 
-        tag="i">
-      </router-link>
-      <router-link :to="{ name: 'cloud' }"   
-        class="p-3 m-3 fas fw fa-file text-gray-500" 
-        tag="i">
-      </router-link>
-      <router-link :to="{ name: 'chat' }"
-        class="p-3 m-3 fas fw fa-comments text-gray-500" 
-        tag="i">
-      </router-link>
-      <router-link :to="{ name: 'settings' }"     
-        class="p-3 m-3 fas fw fa-cog text-gray-500" 
-        tag="i">
-      </router-link>   
-    </div>
+  <div class="flex p-3 bg-white md:float-left h-screen rounded-l-lg">
+      <div class="md:flex md:flex-col md:items-center sm:flex-row sm:items-end">
+        <i class="fas fa-bars m-5 mb-6 hidden md:block"></i>
+        <router-link exact to='/email'>
+          <i class="fas fa-envelope-open m-5 text-gray-500"></i>
+        </router-link>
+        <router-link exact to='/games'>
+        <i class="fas fa-gamepad m-5 text-gray-500"></i>
+        </router-link>
+        
+        <router-link exact to='/todo'>
+        <i class="fas fa-list-alt m-5 text-gray-500"></i>
+        </router-link>
+
+        <router-link exact to='/calendar'>        
+        <i class="fas fa-calendar-alt m-5 text-gray-500"></i>
+        </router-link>
+        
+        <router-link exact to='/scheduler'>      
+        <i class="fas fa-clock m-5 text-gray-500"></i>
+        </router-link>
+        
+        <router-link exact to='/cloud'>        
+        <i class="fas fa-file m-5 text-gray-500"></i>
+        </router-link>
+        
+        <router-link exact to='/chat'>
+        <i class="fas fa-comments m-5 text-gray-500"></i>
+        </router-link>
+        
+        <router-link exact to='/settings'>        
+        <i class="fas fa-cog m-5 text-gray-500"></i>
+        </router-link>        
+      </div>
   </div>
 </template>
 
@@ -63,12 +61,12 @@ i {
 a {
   cursor: default;
 }
-.router-link-exact-active .grow:before{ 
-  transform: scale(2);
-  
-}
-.router-link-exact-active i{
+.router-link-exact-active {
+  background-color: #e0f6ff;
+  border-radius: 10px;
+  animation: createBox .25s;
   color: #32c0fb;
+
 }
 .tab {
   width: 15px;
@@ -95,7 +93,6 @@ a {
   }
   to {
   }
-} */
-
+}
 
 </style>
