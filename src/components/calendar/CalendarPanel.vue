@@ -1,12 +1,12 @@
 <template>
-  <div>
-asdasd
-  </div>
+  <section id="calendar-panel">
+
+  </section>
 </template>
 
 <script>
   export default {
-    name: "Games",
+    name: "CalendarPanel"
     
   }
 </script>

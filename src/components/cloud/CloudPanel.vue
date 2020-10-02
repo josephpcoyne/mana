@@ -1,12 +1,12 @@
 <template>
-  <div>
-asdasd
-  </div>
+  <section id="cloud-panel">
+
+  </section>
 </template>
 
 <script>
   export default {
-    name: "Games",
+    name: "CloudPanel"
     
   }
 </script>

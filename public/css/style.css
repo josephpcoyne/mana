@@ -1,6 +1,11 @@
 * {
   font-family: "Circular Book", sans-serif;
 }
+button {
+  outline:none !important;
+  /* box-shadow: none !important; */
+  /* border-color: transparent !important; */
+}
 body {
   background-color: #97979762;
 }

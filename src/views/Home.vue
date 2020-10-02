@@ -6,7 +6,7 @@
    <span></span>
    <span></span>
 </div>
-    <h1>Welcome to Mana</h1>
+  
     
   </div>
 </template>
@@ -14,12 +14,12 @@
 <script>
 // @ is an alias to /src
 import Card from '@/components/Card.vue';
-import Sidebar from '@/components/Sidebar.vue';
+import NavBar from '@/components/NavBar.vue';
 export default {
-  name: 'home',
+  name: 'Home',
   components: {
     Card,
-    Sidebar
+    NavBar
   },
 
 }
