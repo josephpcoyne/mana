@@ -2,8 +2,6 @@
   <div>
     <ChatSidePanel :people="people"/>
     <TopBar />
-    
-    
   </div>
 </template>
 
@@ -28,6 +26,4 @@ import TopBar from '@/components/TopBar.vue';
 </script>
 
 <style scoped>
-
-
 </style>

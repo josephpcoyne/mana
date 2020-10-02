@@ -39,9 +39,9 @@
 <script>
   export default {
     data() {
-      return {
-      }
     },
+    methods: {
+    }
   };
 </script>
 
@@ -54,6 +54,10 @@
   color:  #32c0fb;
   cursor: pointer;
 }
+i {
+  z-index: 10;
+  position: relative;
+}
 a {
   cursor: default;
 }
@@ -64,12 +68,30 @@ a {
   color: #32c0fb;
 
 }
-@keyframes createBox {
+.tab {
+  width: 15px;
+  height: 15px;
+  position: relative;
+  transform-origin: 0 0;
+  transition: all 2s;
+}
+.tab:before{
+  content: "";
+  background-color: #e0f6ff;
+  /* border-radius: 10px; */
+  width: 15px;
+  height: 15px;
+  z-index: 1;
+  position: absolute;
+  transform-origin: 0 0;
+  transition: all 2s;
+}
+
+/* @keyframes grow {
   from {
     transform: scale(0);
   }
   to {
-    transform: scale(1);
   }
 }
 

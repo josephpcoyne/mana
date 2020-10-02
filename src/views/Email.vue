@@ -10,7 +10,6 @@ import SidePanel from '@/components/email/SidePanel.vue';
 
   export default {
     components: {
-
       SidePanel,
     },
   }

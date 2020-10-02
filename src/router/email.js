@@ -4,6 +4,7 @@ import Starred from "../views/email/Starred.vue";
 
 export default {
   path: "/email",
+  name: 'email',
   component: Email,
   children: [
     {
