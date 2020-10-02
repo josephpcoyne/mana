@@ -1,7 +1,7 @@
 <template>
   <div>
     <ChatSidePanel :people="people"/>
-    <TopBar />
+    <!-- <TopBar /> -->
   </div>
 </template>
 
