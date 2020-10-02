@@ -1,36 +1,37 @@
 <template>
-  <div class="flex p-3 bg-white md:float-left h-screen rounded-l-lg">
-      <div class="md:flex md:flex-col md:items-center sm:flex-row sm:items-end">
-        <i class="fas fa-bars m-5 mb-6 hidden md:block"></i>
-        <router-link exact to='/email'>
-          <i class="fas fa-envelope-open m-5 text-gray-500"></i>
+  <div class="flex p-6 bg-white md:float-left h-screen rounded-l-lg">
+      <div class="md:flex md:flex-col md:items-center sm:flex-row sm:items-end text-2xl ">
+        <i class="fas fa-bars m-6 my-6 mb-12 hidden md:block text-xl"></i>
+
+        <router-link exact to='/email' class="m-2 my-3">
+          <i class="fas fa-envelope-open m-2 p-2 text-gray-500"></i>
         </router-link>
-        <router-link exact to='/games'>
-        <i class="fas fa-gamepad m-5 text-gray-500"></i>
+        <router-link exact to='/games' class="m-2 my-3">
+          <i class="fas fa-gamepad m-2 p-2 text-gray-500"></i>
         </router-link>
         
-        <router-link exact to='/todo'>
-        <i class="fas fa-list-alt m-5 text-gray-500"></i>
+        <router-link exact to='/todo' class="m-2 my-3">
+          <i class="fas fa-list-alt m-2 p-2 text-gray-500"></i>
         </router-link>
 
-        <router-link exact to='/calendar'>        
-        <i class="fas fa-calendar-alt m-5 text-gray-500"></i>
+        <router-link exact to='/calendar' class="m-2 my-3">
+          <i class="fas fa-calendar-alt m-2 p-2 text-gray-500"></i>
         </router-link>
         
-        <router-link exact to='/scheduler'>      
-        <i class="fas fa-clock m-5 text-gray-500"></i>
+        <router-link exact to='/scheduler' class="m-2 my-3">
+          <i class="fas fa-clock m-2 p-2 text-gray-500"></i>
         </router-link>
         
-        <router-link exact to='/cloud'>        
-        <i class="fas fa-file m-5 text-gray-500"></i>
+        <router-link exact to='/cloud' class="m-2 my-3">
+          <i class="fas fa-file m-2 p-2 text-gray-500"></i>
         </router-link>
         
-        <router-link exact to='/chat'>
-        <i class="fas fa-comments m-5 text-gray-500"></i>
+        <router-link exact to='/chat' class="m-2 my-3">
+         <i class="fas fa-comments m-2 p-2 text-gray-500"></i>
         </router-link>
         
-        <router-link exact to='/settings'>        
-        <i class="fas fa-cog m-5 text-gray-500"></i>
+        <router-link exact to='/settings' class="m-2 mt-48">
+         <i class="fas fa-cog m-2 p-2 text-gray-500"></i>
         </router-link>        
       </div>
   </div>

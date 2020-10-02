@@ -3,7 +3,7 @@
     <span class="logo flex p-6 text-mana-200 text-2xl">mana</span>
       <div class="py-3">
         <button class="flex m-auto font-bold py-2 px-4 rounded-lg shadow active:shadow-none hover:text-mana-200 text-sm text-gray-500 active:shadow-none">
-  Compose Email
+          Compose Email
         </button>
       </div>
     <div class="p-6"> 

@@ -1,12 +1,6 @@
 <template>
   <div class="bg-white h-screen float-left border-l border-gray-200 w-1/6">
     <h1 class="logo flex p-6 text-mana-200 text-2xl">mana</h1>
-
-    <div class="flex items-center m-2 mx-8">
-      <!-- <img class="w-16 h-16 mb-10 -mx-5" src="@/assets/mana-logo-light.png" alt="Mana Logo"> -->
-
-    </div>
-  
   
     <div class="flex items-center m-2 my-4" v-for="person in people" :key="person.id">
       <div class="notification">

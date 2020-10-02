@@ -1,6 +1,6 @@
 <template>
   <div>
-    <SidePanel />
+    <SidePanel />    
     <router-view></router-view>
   </div>
 </template>
