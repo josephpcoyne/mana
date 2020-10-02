@@ -87,12 +87,4 @@ a {
   transition: all 2s;
 }
 
-/* @keyframes grow {
-  from {
-    transform: scale(0);
-  }
-  to {
-  }
-}
-
 </style>
