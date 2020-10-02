@@ -1,17 +1,17 @@
 <template>
   <div>
-    <SecondaryPanel :pageTitle="pageTitle"/>
+    <TodoPanel :pageTitle="pageTitle"/>
     <PrimaryPanel />
   </div>
 </template>
 
 <script>
-import SecondaryPanel from '@/components/todo/SecondaryPanel.vue';
+import TodoPanel from '@/components/todo/TodoPanel.vue';
 import PrimaryPanel from '@/components/todo/PrimaryPanel.vue';
   export default {
     name: "Todo",
     components: {
-      SecondaryPanel,
+      TodoPanel,
       PrimaryPanel
     },
     data() {

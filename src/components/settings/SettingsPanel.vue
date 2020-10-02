@@ -1,16 +1,13 @@
 <template>
-  <div>
-    <SidePanel />
-  </div>
+  <section id="settings-panel">
+
+  </section>
 </template>
 
 <script>
-
   export default {
-    name:"Settings",
-    components: {
-
-    },
+    name: "SettingsPanel"
+    
   }
 </script>
 

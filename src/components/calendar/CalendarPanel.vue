@@ -1,16 +1,13 @@
 <template>
-  <div>
-    <SidePanel />
-  </div>
+  <section id="calendar-panel">
+
+  </section>
 </template>
 
 <script>
-
   export default {
-    name:"Settings",
-    components: {
-
-    },
+    name: "CalendarPanel"
+    
   }
 </script>
 

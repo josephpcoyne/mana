@@ -7,11 +7,11 @@
 
 <script>
 import TopBar from '@/components/TopBar.vue';
-import MainPanel from '@/components/email/MainPanel.vue';
+// import MainPanel from '@/components/email/MainPanel.vue';
   export default {
     components: {
       TopBar,
-      MainPanel
+      // MainPanel
     },
   }
 </script>

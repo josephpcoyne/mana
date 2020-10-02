@@ -7,7 +7,7 @@
     </div>
     <div class="flex p-6">
       <div class="container mx-auto py-10">
-        <div class=" border border-gray-400 m-6 rounded-lg bg-gray-200 mx-auto max-w-sm rounded-lg overflow-hidden">
+        <div class=" border border-gray-400 m-6 bg-gray-200 mx-auto max-w-sm rounded-lg overflow-hidden">
         	<div class="sm:flex sm:items-center px-6 py-4">
          		<div class="text-center sm:text-left sm:flex-grow">
             	<div class="px-2 text-center">

@@ -1,30 +1,5 @@
 <template>
-  <div class="bg-white h-screen float-left border-l border-gray-200 w-1/6">
-    <span class="logo flex p-6 text-mana-200 text-2xl">mana</span>
-      <div class="p-4 mt-8">
-        <span class="text-md text-gray-500">Lists </span>
-        <i class="fas fa-plus text-gray-500 text-md p-1 pt-1 cursor-pointer hover:text-mana-200"></i>  
-      </div>
-    <div class="p-2 flex flex-col items-center">
-			<button v-for="list in lists" :key="list.id" :class="{active:list.id == selected}" @click="selected = list.id" 
-      class="max-w-sm w-full m-2 my-1 p-2 text-gray-600 focus:text-gray-900 focus:outline-none rounded-lg focus:bg-mana-100">
-				<div class="flex justify-between w-full">
-					<i class="fas fa-list">
-						<span class="leading-tight ml-2 font-thin">
-							{{list.title}}
-						</span>
-					</i>
-					
-					<!-- <i class="fas fa-ellipsis-h text-gray-500 self-center hover:text-mana-200" v-if="selected == list.id"></i> -->
-					<div class="text-sm text-gray-600">
-						{{list.tasks}}
-					</div>
-				</div>
-			</button>
-		
-		</div> 
-
-    
+  <div class="content">
   </div>
 </template>
 
@@ -39,7 +14,7 @@
       return {
         selected: undefined,
         active_el: 0,
-        lists: [
+        projects: [
           {
             id: 0,
             title: "Clean room",
@@ -62,13 +37,82 @@
 </script>
 
 <style scoped>
-/* .active {  
-  background-color: #e0f6ff;
-  border-radius: 10px;
+.title {
+  font-family: 'Nunito', sans-serif;
 }
+.content {
+  display: flex;
+  flex-direction: column;
+  float: left;
+  border-style: solid;
+  border-color: #a5aeba3a;
+  border-width: 1px;
+  border-right: 1px;
+  border-top: 1px;
+  border-bottom: 1px;
+  background-color: white;
+  box-shadow: 0 3px 4px -2px rgba(0, 0, 0, 0.05);
+  margin: 0 auto;
+  padding: 30px 20px;
+  width: 20%;
+  height: 91.5vh;
+}
+.title {
+  margin-top: 20%;
+}
+.subtitle {
+  color: #a5aeba
+}
+.items {
+  list-style-type: none;
+  margin-left: -10%;
+  margin-top: -1%; 
 
-
-.active>i {
+}
+.item {
+  padding: 5px 0px 20px 1px;
+  height: 20px;
+  max-width: 240px;
+}
+li i {
+  color: #a5aeba;
+  padding: 10px;
+  padding-left: 20px;
+}
+.task-count {
+  font-size: 14px;
+  color: #a5aeba;
+  margin-left: 15%;
+}
+.active {  
   color: #32c0fb;
+  background-color: #e0f6ff;
+  border-radius: 40px;
+
+  /* animation: createBox .25s; */
+}
+.options {
+  margin-right: 4%;
+  float: right;
+}
+.options:hover {
+  color: #32c0fb;
+}
+.add-project {
+  float: right;
+  margin-top: 1%;
+  color: #a5aeba;  
+}
+.add-project:hover {
+  color: #32c0fb;
+  
+}
+/* @keyframes createBox {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 } */
 </style>
