@@ -1,15 +1,10 @@
 <template>
-  <div class="bg-gray-200 h-screen float-left border-l border-gray-200 w-1/5">
-  <!-- <div class="">
-    <img class="w-16" src="@/assets/mana-logo-light.png" alt="">
-    <h1 class="logo p-6 text-mana-200 text-2xl mb-10" >mana</h1>
+  <div class="bg-white h-screen float-left border-l border-gray-200 w-1/6">
+    <h1 class="logo flex p-6 text-mana-200 text-2xl">mana</h1>
 
-  </div> -->
     <div class="flex items-center m-2 mx-8">
       <!-- <img class="w-16 h-16 mb-10 -mx-5" src="@/assets/mana-logo-light.png" alt="Mana Logo"> -->
-      <div class="text-sm">
-        <h1 class="logo p-6 text-mana-200 text-3xl mb-10">mana</h1>
-      </div>
+
     </div>
   
   

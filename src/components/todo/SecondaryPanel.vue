@@ -1,28 +1,27 @@
 <template>
-  <div class="bg-white h-screen float-left border-l border-gray-200 w-1/5">
-  <h1 class="logo flex p-6 text-mana-200 text-2xl">mana</h1>
+  <div class="bg-white h-screen float-left border-l border-gray-200 w-1/6">
+  <span class="logo flex p-6 text-mana-200 text-2xl">mana</span>
     <div class="flex">
       <div class="flex-auto p-6 mt-8">
-        <span class="text-xl">Projects - {{projects.length}}</span>
+        <span class="text-xl focus:text-red-600">Projects - {{projects.length}}</span>
         <i class="fas fa-plus text-gray-500 text-2xl p-1 float-right pt-1 cursor-pointer hover:text-mana-200"></i>  
       </div>
     </div>
-    <!-- <div class="flex p-6 mt-8">
-      <h5 class="text-2xl">Projects</h5>
-    </div> -->
-
         
-      <button v-for="project in projects" :class="{active:project.id == selected}" @click="selected = project.id" class="max-w-sm mx-auto flex focus:outline-none w-30 rounded-full py-2">
-        <div class="flex-shrink-0">
-          <img class="h-12 w-12" src="@/assets/mp1.png" alt="Project Icon">
-        </div>
-        <div class="ml-3 pt-1">
-          <span class="text-base text-gray-900 leading-tight">{{project.title}}</span>
-          <i class="fas fa-ellipsis-h text-gray-500 ml-3 flex float-right" v-if="selected == project.id"></i>
-          <div class="flex text-sm text-gray-600">{{project.tasks}} tasks</div>
-          <!-- <i class="fas fa-ellipsis-h text-gray-500 float-right" v-if="selected == project.id"></i> -->
-        </div>
-      </button>
+		<button v-for="project in projects" :key="project.id" :class="{active:project.id == selected}" @click="selected = project.id" class="group max-w-sm mx-auto focus:text-gray-700 focus:outline-none w-full flex my-4 p-2 text-gray-600">
+			<div class="flex justify-between w-full">
+				<i class="fas fa-list">
+					<span class="leading-tight ml-2 font-thin group-focus:font-medium ">
+						{{project.title}}
+					</span>
+				</i>
+				
+				<!-- <i class="fas fa-ellipsis-h text-gray-500 self-center hover:text-mana-200" v-if="selected == project.id"></i> -->
+				<div class="text-sm text-gray-600">
+					{{project.tasks}}
+				</div>
+			</div>
+		</button>
 
     
   </div>
@@ -62,18 +61,13 @@
 </script>
 
 <style scoped>
-.active {  
-  color: #32c0fb;
+/* .active {  
   background-color: #e0f6ff;
-  border-radius: 40px;
+  border-radius: 10px;
+}
 
-  /* animation: createBox .25s; */
-}
-.options {
-  margin-right: 4%;
-  float: right;
-}
-.options:hover {
+
+.active>i {
   color: #32c0fb;
-}
+} */
 </style>
