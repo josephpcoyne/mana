@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <NavBar @send-tab="sentTab"/>
-    <SidePanel :is="currentTab"/>
+    <SidePanel :currentTab="currentTab"/>
     <router-view/>
   </div>
 </template>
@@ -13,15 +13,11 @@
 <script>
   import NavBar from '@/components/NavBar.vue';
 	import SidePanel from '@/components/SidePanel.vue';
-	import Email from '@/views/Email.vue';
-	import Games from '@/views/Games.vue';
 
   export default {
     components: {
       NavBar,
 			SidePanel,
-			Email,
-			Games
 		},
 		data() {
 			return {
@@ -30,7 +26,7 @@
 		},
 		methods: {
 			sentTab(e) {
-				this.currentTab = e.toLowerCase()
+				this.currentTab = e
 			}
 		}
   }
