@@ -4,11 +4,16 @@
 body {
   background-color: #97979762;
 }
+
+.router-link-exact-active i {
+  color: #32c0fb;
+}
 .logo {
   font-family: Gilroy-ExtraBold;
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
   font-family: "Circular Book";
   src: url("fonts/lineto-circular-pro-book.eot");

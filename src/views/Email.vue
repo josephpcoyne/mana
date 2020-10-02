@@ -16,6 +16,6 @@ import SidePanel from '@/components/email/SidePanel.vue';
   }
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>
