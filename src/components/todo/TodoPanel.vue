@@ -1,35 +1,35 @@
 <template>
-  <div class="bg-white h-screen float-left border-l border-gray-200 w-1/6">
-    <span class="logo flex p-6 text-mana-200 text-2xl">mana</span>
-      <div class="p-4 mt-8">
-        <span class="text-md text-gray-500">Lists </span>
-        <i class="fas fa-plus text-gray-500 text-md p-1 pt-1 cursor-pointer hover:text-mana-200"></i>  
-      </div>
+  <section id="todo-panel">
+    <div class="p-4 mt-8">
+      <span class="text-md text-gray-500">Lists </span>
+      <i class="fas fa-plus text-gray-500 text-md p-1 pt-1 cursor-pointer hover:text-mana-200"></i>  
+    </div>
     <div class="p-2 flex flex-col items-center">
-			<button v-for="list in lists" :key="list.id" :class="{active:list.id == selected}" @click="selected = list.id" 
-      class="max-w-sm w-full m-2 my-1 p-2 text-gray-600 focus:text-gray-900 focus:outline-none rounded-lg focus:bg-mana-100">
-				<div class="flex justify-between w-full">
-					<i class="fas fa-list">
-						<span class="leading-tight ml-2 font-thin">
-							{{list.title}}
-						</span>
-					</i>
-					
-					<!-- <i class="fas fa-ellipsis-h text-gray-500 self-center hover:text-mana-200" v-if="selected == list.id"></i> -->
-					<div class="text-sm text-gray-600">
-						{{list.tasks}}
-					</div>
-				</div>
-			</button>
-		
-		</div> 
+      <button v-for="list in lists" :key="list.id" :class="{active:list.id == selected}" @click="selected = list.id" 
+      class="max-w-sm w-full m-2 my-1 p-2 text-gray-600 focus:text-gray-900 rounded-lg focus:bg-mana-100">
+        <div class="flex justify-between w-full">
+          <i class="fas fa-list">
+            <span class="leading-tight ml-2 font-thin">
+              {{list.title}}
+            </span>
+          </i>
+          
+          <!-- <i class="fas fa-ellipsis-h text-gray-500 self-center hover:text-mana-200" v-if="selected == list.id"></i> -->
+          <div class="text-sm text-gray-600">
+            {{list.tasks}}
+          </div>
+        </div>
+      </button>
+    
+    </div> 
 
     
-  </div>
+  </section>
 </template>
 
 <script>
   export default {
+    name: "TodoPanel",
     props: {
       pageTitle: {
         type: String,
