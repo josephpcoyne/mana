@@ -1,7 +1,6 @@
 <template>
   <div>
-    <TodoPanel :pageTitle="pageTitle"/>
-    <PrimaryPanel />
+      <PrimaryPanel />
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
   <div class="flex content-start flex-wrap bg-gray-100 h-screen rounded-r-lg">
     <TopBar />
-    <MainPanel />
+    <!-- <MainPanel /> -->
   </div>
 </template>
 

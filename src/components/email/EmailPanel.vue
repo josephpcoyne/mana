@@ -2,7 +2,7 @@
 	<section id="email-panel">
 		<div class="mb-12 p-3">
 			<button
-				class="flex m-auto font-bold py-2 px-4 rounded-lg active:shadow-inner hover:text-mana-200 text-sm text-gray-500"
+				class="flex m-auto font-bold py-2 px-4 rounded-lg shadow active:shadow-inner hover:text-mana-200 active:text-blue-200 text-sm text-gray-500"
 			>Compose Email</button>
 		</div>
 
@@ -57,7 +57,7 @@ i {
 /* .email-count {
   visibility: hidden;
 } */
-.router-link-exact-active {
+/* .router-link-exact-active {
 	color: #32c0fb !important;
 	font-weight: bold;
 }
@@ -66,5 +66,5 @@ i {
 	border-radius: 10px;
 	background-color: #e0f6ff;
 	color: #32c0fb;
-}
+} */
 </style>

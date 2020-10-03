@@ -1,5 +1,5 @@
 <template>
-	<nav class="flex p-6 bg-white md:float-left h-screen rounded-l-lg">
+	<nav class="flex p-4 bg-white md:float-left h-screen rounded-l-lg">
 		<div class="md:flex md:flex-col md:items-center sm:flex-row sm:items-end text-2xl">
 			<i class="fas fa-bars m-6 my-6 mb-16 hidden md:block text-xl"></i>
 			<button
@@ -67,7 +67,7 @@ export default {
 	methods: {
 		sendTab(t) {
 			this.selectedTab = t.component;
-			if (this.$route.path !== '/') this.$router.push('/');
+			// if (this.$route.path !== '/') this.$router.push('/');
 			this.$emit('send-tab', this.selectedTab);
 		},
 	},

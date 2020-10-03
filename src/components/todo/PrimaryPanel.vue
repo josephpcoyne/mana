@@ -30,6 +30,7 @@ import Card from '@/components/Card.vue';
 import Search from '@/components/Search.vue';
 
 export default {
+  name: "TodoBody",
   components: {
     TopBar,
     Card,
