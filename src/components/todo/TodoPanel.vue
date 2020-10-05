@@ -1,28 +1,25 @@
 <template>
   <section id="todo-panel">
-    <div class="p-4 mt-8">
-      <span class="text-md text-gray-500">Lists </span>
-      <i class="fas fa-plus text-gray-500 text-md p-1 pt-1 cursor-pointer hover:text-mana-200"></i>  
-    </div>
-    <div class="p-2 flex flex-col items-center">
-      <button v-for="list in lists" :key="list.id" :class="{active:list.id == selected}" @click="selected = list.id" 
-      class="max-w-sm w-full m-2 my-1 p-2 text-gray-600 focus:text-gray-900 rounded-lg focus:bg-mana-100">
-        <div class="flex justify-between w-full">
-          <i class="fas fa-list">
-            <span class="leading-tight ml-2 font-thin">
-              {{list.title}}
-            </span>
-          </i>
-          
-          <!-- <i class="fas fa-ellipsis-h text-gray-500 self-center hover:text-mana-200" v-if="selected == list.id"></i> -->
-          <div class="text-sm text-gray-600">
-            {{list.tasks}}
-          </div>
-        </div>
-      </button>
-    
-    </div> 
 
+    <div class="mb-12 py-3">
+			<button
+				class="flex m-auto font-bold py-2 px-4 rounded-lg shadow active:shadow-inner hover:text-mana-200 active:text-blue-200 text-sm text-gray-500"
+			>New List</button>
+		</div>
+
+    <div class="py-3 mt-8 flex justify-between">
+      <span class="text-md text-gray-500">Lists </span>
+      <i class="fas fa-plus text-gray-500 text-sm p-1 pt-1 cursor-pointer hover:text-mana-200"></i>  
+    </div>
+    <ul v-for="list in lists" :key="list.id" @click="selected = list.id">
+      <li tabindex="0" class="group flex justify-between items-center focus:bg-mana-100 h-8 rounded-lg cursor-pointer px-2 my-1 ">
+        <span class="text-gray-600 group-focus:text-gray-800">
+          <i class="fas fa-list-ul pr-4 text-gray-600 group-focus:text-mana-200"></i>
+          {{list.title}}
+        </span>
+        <span class="text-gray-600 group-focus:text-gray-800">{{list.tasks}}</span>
+      </li>
+    </ul>
     
   </section>
 </template>
@@ -62,13 +59,5 @@
 </script>
 
 <style scoped>
-/* .active {  
-  background-color: #e0f6ff;
-  border-radius: 10px;
-}
 
-
-.active>i {
-  color: #32c0fb;
-} */
 </style>
