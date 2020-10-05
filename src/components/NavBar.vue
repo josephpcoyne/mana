@@ -9,7 +9,7 @@
 				:class="{ link : selectedTab == tab.component }"
 				@click="sendTab(tab)"
 			>
-				<i class="fas m-2 p-2 text-gray-500" :class="tab.icon"></i>
+				<i class="fas m-2 p-2 text-gray-500 hover:cursor-pointer hover:text-mana-200" :class="tab.icon"></i>
 			</button>
 		</div>
 	</nav>
@@ -67,10 +67,23 @@ export default {
 	methods: {
 		sendTab(t) {
 			this.selectedTab = t.component;
+			this.saveStorage(this.selectedTab);
 			// if (this.$route.path !== '/') this.$router.push('/');
 			this.$emit('send-tab', this.selectedTab);
 		},
+		openStorage () {
+      return JSON.parse(localStorage.getItem('tab'));
+    },
+    saveStorage (tab) {
+      localStorage.setItem('tab', JSON.stringify(tab));
+    },
 	},
+	created () {
+	const storedTab = this.openStorage()
+	if (storedTab) {
+		this.selectedTab = storedTab;
+	}
+}
 };
 </script>
 
@@ -78,13 +91,6 @@ export default {
 .fa-bars {
 	transform: scale(1.3, 1);
 	cursor: pointer;
-}
-.fas:hover {
-	color: #32c0fb;
-	cursor: pointer;
-}
-a {
-	cursor: default;
 }
 .link {
 	background-color: #e0f6ff;

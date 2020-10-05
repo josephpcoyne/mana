@@ -7,6 +7,9 @@ module.exports = {
   plugins: [],
   theme: {
     extend: {
+      // backgroundColor: theme => ({
+
+      // })
       colors: {
         mana: {
           "100": "#e0f6ff",
