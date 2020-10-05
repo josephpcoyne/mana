@@ -6,10 +6,12 @@ module.exports = {
   },
   plugins: [],
   theme: {
+    fontFamily: {
+      'logo': 'Gilroy-ExtraBold',
+      'sans': 'Circular-Book',
+      'bold': 'Circular-Medium'
+    },
     extend: {
-      // backgroundColor: theme => ({
-
-      // })
       colors: {
         mana: {
           "100": "#e0f6ff",
