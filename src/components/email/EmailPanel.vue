@@ -9,7 +9,7 @@
 		<ul>
 			<li tabindex="0" class="group flex justify-between items-center focus:bg-mana-100 h-8 rounded-lg cursor-pointer px-2 ">
 				<!-- <router-link to="/inbox" class="group w-full focus:bg-mana-100 rounded-lg"> -->
-					<span class="text-gray-600 group-focus:text-gray-800">
+					<span class="text-gray-600 group-focus:text-gray-600 group-focus:font-sans-bold">
 						<i class="fas fa-inbox pr-8 text-gray-600 group-focus:text-mana-200"></i>
 						Inbox
 					</span>
@@ -19,7 +19,7 @@
 			<li tabindex="0" class="group flex justify-between items-center focus:bg-mana-100 h-8 rounded-lg cursor-pointer px-2 ">
 
 				<!-- <router-link to="/starred"> -->
-					<span class="text-gray-600 group-focus:text-gray-800">
+					<span class="text-gray-600 group-focus:text-gray-600 group-focus:font-sans-bold">
 					<i class="fas fa-star pr-8 text-gray-600 group-focus:text-mana-200"></i>
 						Starred</span>
 					<span class="text-gray-600 group-focus:text-gray-800">5</span>
@@ -29,7 +29,7 @@
 
 
 			<!-- <router-link to="/snoozed"> -->
-				<span class="text-gray-600 group-focus:text-gray-800">
+					<span class="text-gray-600 group-focus:text-gray-600 group-focus:font-sans-bold">
 				<i class="fas fa-clock pr-8 text-gray-600 group-focus:text-mana-200"></i>
 					Snoozed</span>
 				<span class="text-gray-600 group-focus:text-gray-800">3</span>
@@ -39,7 +39,7 @@
 
 
 				<!-- <router-link to="/sent"> -->
-					<span class="text-gray-600 group-focus:text-gray-800">
+					<span class="text-gray-600 group-focus:text-gray-600 group-focus:font-sans-bold">
 					<i class="fas fa-paper-plane pr-8 text-gray-600 group-focus:text-mana-200"></i>
 						Sent</span>
 					<span class="text-gray-600 group-focus:text-gray-800">0</span>
@@ -50,7 +50,7 @@
 
 
 				<!-- <router-link to="/drafts"> -->
-					<span class="text-gray-600 group-focus:text-gray-800">
+					<span class="text-gray-600 group-focus:text-gray-600 group-focus:font-sans-bold">
 					<i class="fas fa-file pr-8 text-gray-600 group-focus:text-mana-200"></i>
 						Drafts</span>
 					<span class="text-gray-600 group-focus:text-gray-800">2</span>

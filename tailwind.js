@@ -3,6 +3,7 @@ module.exports = {
     boxShadow: ['responsive', 'hover', 'focus', 'active'],
     backgroundColor: ['responsive', 'hover', 'focus', 'focus-within', 'active'],
     textColor: ['responsive', 'hover', 'focus', 'active', 'group-focus', 'focus-within', 'group-hover'],
+    fontFamily: ['responsive', 'hover', 'focus', 'active', 'group-focus', 'focus-within', 'group-hover'],
   },
   plugins: [],
   theme: {
