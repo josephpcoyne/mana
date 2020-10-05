@@ -9,7 +9,7 @@ module.exports = {
     fontFamily: {
       'logo': 'Gilroy-ExtraBold',
       'sans': 'Circular-Book',
-      'bold': 'Circular-Medium'
+      'sans-bold': 'Circular-Medium'
     },
     extend: {
       colors: {

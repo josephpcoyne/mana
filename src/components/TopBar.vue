@@ -12,7 +12,7 @@
         <i class="fas fa-user icon p-2 m-2 text-mana-200 rounded-full bg-mana-100"></i>
       </li>
       <li class="m-2">
-        <span class="text-,d p-2 c-m">joseph@coyne.dev</span>
+        <span class="text-md p-2 font-sans-bold">joseph@coyne.dev</span>
       </li>
     </ul>
   </div>
@@ -25,8 +25,5 @@
 </script>
 
 <style scoped>
-.c-m {
-  font-family: Circular-Medium, sans-serif;
-}
 
 </style>
