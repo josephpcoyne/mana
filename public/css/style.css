@@ -1,37 +1,13 @@
-* {
-  font-family: "Circular Book", sans-serif;
-}
 button {
   outline:none !important;
-  /* box-shadow: none !important; */
-  /* border-color: transparent !important; */
 }
 li {
   outline:none !important;
 }
-body {
-  background-color: #97979762;
-}
-
 .router-link-exact-active i {
   color: #32c0fb;
 }
-.logo {
-  font-family: Gilroy-ExtraBold;
-  font-weight: normal;
-  font-style: normal;
-}
 
-@font-face {
-  font-family: "Circular Book";
-  src: url("fonts/lineto-circular-pro-book.eot");
-  src: url("fonts/lineto-circular-pro-book.eot?#iefix")
-      format("embedded-opentype"),
-    url("fonts/lineto-circular-pro-book.woff2") format("woff2"),
-    url("fonts/lineto-circular-pro-book.woff") format("woff"),
-    url("fonts/lineto-circular-pro-book.ttf") format("truetype"),
-    url("fonts/lineto-circular-pro-book.svg#Circular Book") format("svg");
-}
 @keyframes createBox {
   from {
     transform: scale(0);

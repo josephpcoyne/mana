@@ -1,0 +1,25 @@
+@import url('//hello.myfonts.net/count/3a1e3c');
+
+@font-face {
+	font-family: 'Gilroy-ExtraBold';
+	src: url('webfonts/3A1E3C_0_0.eot');
+	src: url('webfonts/3A1E3C_0_0.eot?#iefix') format('embedded-opentype'),
+		url('webfonts/3A1E3C_0_0.woff2') format('woff2'),
+		url('webfonts/3A1E3C_0_0.woff') format('woff'),
+		url('webfonts/3A1E3C_0_0.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Circular-Book';
+	src: url('fonts/circular-book'),
+	  url('fonts/circular-book?#iefix') format('embedded-opentype'),
+		url('fonts/circular-book.woff2') format('woff2'),
+		url('fonts/circular-book.woff') format('woff'),
+		url('fonts/circular-book.ttf') format('truetype'),
+		url('fonts/circular-book.svg#Circular-Book') format('svg');
+}
+
+@font-face {
+	font-family: 'Circular-Medium';
+	src: url('fonts/circular-medium.woff') ,
+	url('fonts/circular-medium.woff2') format('woff');
+}

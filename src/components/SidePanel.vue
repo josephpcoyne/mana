@@ -1,7 +1,7 @@
 <template>
   <div class="bg-white h-screen float-left border-l border-gray-200 max-w-xs w-1/6 ">
     <div class="flex justify-center p-4 mt-5">
-      <span class="logo text-mana-200 text-2xl">mana</span>
+      <span class="font-logo text-mana-200 text-3xl">mana</span>
     </div>
     <component class="p-4" :is="currentTab"></component>
   </div>

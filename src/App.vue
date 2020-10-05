@@ -1,5 +1,5 @@
 <template>
-	<div id="app">
+	<div id="app" class="bg-gray-700">
 		<NavBar @send-tab="sentTab" />
 		<SidePanel :currentTab="currentTab" />
 		<router-view />
