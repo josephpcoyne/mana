@@ -40,9 +40,9 @@
       class="group flex justify-between items-center h-8 rounded-lg px-2 my-1 cursor-pointer focus:bg-mana-100"
       @click="rotate(list)">
         <span class="text-gray-600 group-focus:font-sans-bold group-focus:text-gray-700 truncate ...">
-          <i v-if="list.folder && !list.isOpen" class="fas fa-folder pr-3  text-gray-600  group-focus:text-mana-200"></i>
-          <i v-else-if="list.isOpen" class="fas fa-folder-open pr-3  text-gray-600  group-focus:text-mana-200"></i>
-          <i v-else class="fas fa-list-ul pr-3  text-gray-600  group-focus:text-mana-200 "></i>
+          <i v-if="list.folder && !list.isOpen" class="fas fa-folder pr-3 text-gray-600  group-focus:text-mana-200"></i>
+          <i v-else-if="list.isOpen" class="fas fa-folder-open pr-3 text-gray-600  group-focus:text-mana-200"></i>
+          <i v-else class="fas fa-list-ul pr-3 text-gray-600 group-focus:text-mana-200 "></i>
           {{list.title}}
         </span>
         <div class="flex items-center pl-2">
@@ -55,7 +55,7 @@
           </span>
 
           <div :class="{'pl-2' : list.folder}">
-            <i v-if="list.folder" class="fas fa-chevron-left norm fa-fw" :class="{ rotate : list.isOpen }"></i>
+            <i v-if="list.folder" class="fas fa-chevron-left fa-fw norm text-gray-600 " :class="{ rotate : list.isOpen }"></i>
           </div>
 
         </div>
