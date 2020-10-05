@@ -3,7 +3,7 @@
     <div class="flex justify-center p-4 mt-5">
       <span class="logo text-mana-200 text-2xl">mana</span>
     </div>
-    <component class="p-6" :is="currentTab"></component>
+    <component class="p-4" :is="currentTab"></component>
   </div>
 </template>
 <script>

@@ -1,8 +1,8 @@
 module.exports = {
   variants: {
     boxShadow: ['responsive', 'hover', 'focus', 'active'],
-    backgroundColor: ['responsive', 'hover', 'focus', 'active'],
-    textColor: ['responsive', 'hover', 'focus', 'active', 'group-hover'],
+    backgroundColor: ['responsive', 'hover', 'focus', 'focus-within', 'active'],
+    textColor: ['responsive', 'hover', 'focus', 'active', 'group-focus', 'focus-within', 'group-hover'],
   },
   plugins: [],
   theme: {

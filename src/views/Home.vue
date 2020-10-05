@@ -1,12 +1,12 @@
 <template>
   <div class="content">
-  <div class="block">
+  <!-- <div class="block">
    <span></span>
    <span></span>
    <span></span>
    <span></span>
 </div>
-  
+   -->
     
   </div>
 </template>

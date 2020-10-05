@@ -1,6 +1,6 @@
 <template>
 	<nav class="flex p-4 bg-white md:float-left h-screen rounded-l-lg">
-		<div class="md:flex md:flex-col md:items-center sm:flex-row sm:items-end text-2xl">
+		<div class="md:flex md:flex-col md:items-center text-2xl">
 			<i class="fas fa-bars m-6 my-6 mb-16 hidden md:block text-xl"></i>
 			<button
 				v-for="tab in tabs"
@@ -68,7 +68,6 @@ export default {
 		sendTab(t) {
 			this.selectedTab = t.component;
 			this.saveStorage(this.selectedTab);
-			// if (this.$route.path !== '/') this.$router.push('/');
 			this.$emit('send-tab', this.selectedTab);
 		},
 		openStorage () {
@@ -78,7 +77,8 @@ export default {
       localStorage.setItem('tab', JSON.stringify(tab));
     },
 	},
-	created () {
+
+	beforeMount () {
 	const storedTab = this.openStorage()
 	if (storedTab) {
 		this.selectedTab = storedTab;

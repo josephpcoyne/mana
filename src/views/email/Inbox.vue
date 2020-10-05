@@ -13,6 +13,9 @@ import TopBar from '@/components/TopBar.vue';
       TopBar,
       // MainPanel
     },
+    created () {
+      localStorage.setItem('tab', JSON.stringify('EmailPanel'));
+    },
   }
 </script>
 
