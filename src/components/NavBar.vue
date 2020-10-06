@@ -95,7 +95,7 @@ export default {
 .link {
 	background-color: #e0f6ff;
 	border-radius: 10px;
-	animation: createBox 0.2s;
+	/* animation: createBox 0.2s; */
 }
 .link i {
 	color: #32c0fb;

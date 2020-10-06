@@ -1,31 +1,32 @@
 <template>
   <section id="todo-panel">
 
-    <div class="mb-12 py-3 ">
+    <div class="mb-8 py-3 ">
 			<button
 				class="flex m-auto font-bold py-2 px-4 rounded-lg shadow active:shadow-inner hover:text-mana-200 active:text-blue-200 text-sm text-gray-500"
 			>New List</button>
 		</div>
+    <!-- Time Catagories  -->
     <ul class="border-b pb-6 border-gray-200">
       <li tabindex="0" class="group flex justify-between items-center h-8 rounded-lg px-2 my-1 cursor-pointer focus:bg-mana-100 ">
-        <span class="text-gray-600 group-focus:font-sans-bold group-focus:text-gray-700">
-          <i class="fas fa-list-alt pr-3  text-gray-600  group-focus:text-mana-200"></i>
-          All
-        </span>
-        <span class="font-sans-bold text-gray-600  group-focus:text-gray-800">15</span>
+        <div class="text-gray-600 group-focus:font-sans-bold group-focus:text-gray-700">
+          <i class="fas fa-th-list pr-3 text-gray-600  group-focus:text-mana-200"></i>
+          <span class="text-sm">All</span>
+        </div>
+        <span class="font-sans-bold text-gray-600 group-focus:text-gray-800">15</span>
       </li>
       <li tabindex="0" class="group flex justify-between items-center h-8 rounded-lg px-2 my-1 cursor-pointer focus:bg-mana-100 ">
-        <span class="text-gray-600 group-focus:font-sans-bold group-focus:text-gray-700">
-          <i class="fas fa-calendar-day pr-3  text-gray-600  group-focus:text-mana-200"></i>
-          Today
-        </span>
-        <span class="font-sans-bold text-gray-600  group-focus:text-gray-800">5</span>
+        <div class="text-gray-600 group-focus:font-sans-bold group-focus:text-gray-700">
+          <i class="fas fa-calendar-day pr-3 text-gray-600 group-focus:text-mana-200"></i>
+          <span class="text-sm">Today</span>
+        </div>
+        <span class="font-sans-bold text-gray-600 group-focus:text-gray-800">5</span>
       </li>
       <li tabindex="0" class="group flex justify-between items-center h-8 rounded-lg px-2 my-1 cursor-pointer focus:bg-mana-100 ">
-        <span class="text-gray-600 group-focus:font-sans-bold group-focus:text-gray-700">
-          <i class="fas fa-calendar-week pr-3  text-gray-600  group-focus:text-mana-200"></i>
-          This Week
-        </span>
+        <div class="text-gray-600 group-focus:font-sans-bold group-focus:text-gray-700">
+          <i class="fas fa-calendar-week pr-3 text-gray-600 group-focus:text-mana-200"></i>
+          <span class="text-sm">This Week</span>
+        </div>
         <span class="font-sans-bold text-gray-600  group-focus:text-gray-800">10</span>
       </li>
     </ul>
@@ -39,21 +40,22 @@
       <li tabindex="0" :class="{ 'pl-8': list.subList }" 
       class="group flex justify-between items-center h-8 rounded-lg px-2 my-1 cursor-pointer focus:bg-mana-100"
       @click="rotate(list)">
-        <span class="text-gray-600 group-focus:font-sans-bold group-focus:text-gray-700 truncate ...">
-          <i v-if="list.folder && !list.isOpen" class="fas fa-folder pr-3 text-gray-600  group-focus:text-mana-200"></i>
-          <i v-else-if="list.isOpen" class="fas fa-folder-open pr-3 text-gray-600  group-focus:text-mana-200"></i>
-          <i v-else class="fas fa-list-ul pr-3 text-gray-600 group-focus:text-mana-200 "></i>
-          {{list.title}}
-        </span>
+        <div class="text-gray-600 group-focus:font-sans-bold group-focus:text-gray-700 truncate ...">
+          <i v-if="list.folder && !list.isOpen" class="far fa-folder pr-3 text-gray-600  group-focus:text-mana-200"></i>
+          <i v-else-if="list.isOpen" class="far fa-folder-open pr-3 text-gray-600 group-focus:text-mana-200"></i>
+          <i v-else class="fas fa-list-ul  pr-3 text-gray-600 group-focus:text-mana-200 "></i>
+          <span class="text-sm">{{list.title}}</span>
+        </div>
         <div class="flex items-center pl-2">
-          
-          <span v-if="!list.folder" class="text-gray-600 group-focus:text-gray-800">
-            {{list.tasks}}
-          </span>
-          <span else class="text-gray-600 group-focus:text-gray-800">
-            {{totalTasks(list.sublists)}}
-          </span>
-
+          <div class="settings">
+            <span v-if="!list.folder" class="text-gray-600 group-focus:text-gray-800 count">
+              {{list.tasks}}
+            </span>
+            <span else class="text-gray-600 group-focus:text-gray-800 count">
+              {{totalTasks(list.sublists)}}
+            </span>
+            <i class="fas fa-ellipsis-h text-gray-600 menu"></i>
+          </div>
           <div :class="{'pl-2' : list.folder}">
             <i v-if="list.folder" class="fas fa-chevron-left fa-fw norm text-gray-600 " :class="{ rotate : list.isOpen }"></i>
           </div>
@@ -65,10 +67,10 @@
         <ul v-for="sublist in list.sublists" :key="sublist.id" @click="selected = sublist.id">
         <li tabindex="0" class="group flex justify-between items-center h-8 rounded-lg px-2 pl-8 my-1 cursor-pointer focus:bg-mana-100"
         @click="rotate(sublist)">
-          <span class="text-gray-600 group-focus:font-sans-bold group-focus:text-gray-700 truncate">
-            <i class="fas fa-list-ul pr-3  text-gray-600  group-focus:text-mana-200"></i>
-            {{sublist.title}}
-          </span>
+          <div class="text-gray-600 group-focus:font-sans-bold group-focus:text-gray-700 truncate">
+            <i class="fas fa-list-ul pr-3 text-gray-600 group-focus:text-mana-200"></i>
+            <span class="text-sm">{{sublist.title}}</span>
+          </div>
           <div class="flex items-center pl-2">
             <span class="text-gray-600 group-focus:text-gray-800">
               {{sublist.tasks}}
@@ -167,7 +169,18 @@
 </script>
 
 <style scoped>
-.norm{
+
+
+ .menu{ 
+   display: none;
+ }
+ .settings:hover .menu{
+   display : block;
+ }
+ .settings:hover .count{
+   display : none;
+ }
+.norm{ 
     -moz-transition: all .15s linear;
     -webkit-transition: all .15s linear;
     transition: all .15s linear;
