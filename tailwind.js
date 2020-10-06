@@ -15,6 +15,7 @@ module.exports = {
     extend: {
       colors: {
         mana: {
+          "50": "#F1FAFF",
           "100": "#e0f6ff",
           "200": "#32c0fb"
         }

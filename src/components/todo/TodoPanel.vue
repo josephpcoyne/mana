@@ -1,33 +1,33 @@
 <template>
   <section id="todo-panel">
-
     <div class="mb-8 py-3 ">
 			<button
-				class="flex m-auto font-bold py-2 px-4 rounded-lg shadow active:shadow-inner hover:text-mana-200 active:text-blue-200 text-sm text-gray-500"
-			>New List</button>
+				class="flex m-auto font-bold py-2 px-4 rounded-lg shadow active:shadow-inner hover:text-mana-200 active:text-blue-200 text-sm text-gray-500">
+        Create New List
+      </button>
 		</div>
     <!-- Time Catagories  -->
     <ul class="border-b pb-6 border-gray-200">
-      <li tabindex="0" class="group flex justify-between items-center h-8 rounded-lg px-2 my-1 cursor-pointer focus:bg-mana-100 ">
+      <li tabindex="0" class="group flex justify-between items-center h-8 rounded-lg px-2 my-1 cursor-pointer hover:bg-mana-50 focus:bg-mana-100 ">
         <div class="text-gray-600 group-focus:font-sans-bold group-focus:text-gray-700">
           <i class="fas fa-th-list pr-3 text-gray-600  group-focus:text-mana-200"></i>
           <span class="text-sm">All</span>
         </div>
-        <span class="font-sans-bold text-gray-600 group-focus:text-gray-800">15</span>
+        <span class="text-sm font-sans-bold text-gray-600 group-focus:text-gray-800">15</span>
       </li>
-      <li tabindex="0" class="group flex justify-between items-center h-8 rounded-lg px-2 my-1 cursor-pointer focus:bg-mana-100 ">
+      <li tabindex="0" class="group flex justify-between items-center h-8 rounded-lg px-2 my-1 cursor-pointer hover:bg-mana-50 focus:bg-mana-100 ">
         <div class="text-gray-600 group-focus:font-sans-bold group-focus:text-gray-700">
           <i class="fas fa-calendar-day pr-3 text-gray-600 group-focus:text-mana-200"></i>
           <span class="text-sm">Today</span>
         </div>
-        <span class="font-sans-bold text-gray-600 group-focus:text-gray-800">5</span>
+        <span class="text-sm font-sans-bold text-gray-600 group-focus:text-gray-800">5</span>
       </li>
-      <li tabindex="0" class="group flex justify-between items-center h-8 rounded-lg px-2 my-1 cursor-pointer focus:bg-mana-100 ">
+      <li tabindex="0" class="group flex justify-between items-center h-8 rounded-lg px-2 my-1 cursor-pointer hover:bg-mana-50 focus:bg-mana-100 ">
         <div class="text-gray-600 group-focus:font-sans-bold group-focus:text-gray-700">
           <i class="fas fa-calendar-week pr-3 text-gray-600 group-focus:text-mana-200"></i>
           <span class="text-sm">This Week</span>
         </div>
-        <span class="font-sans-bold text-gray-600  group-focus:text-gray-800">10</span>
+        <span class="text-sm font-sans-bold text-gray-600 group-focus:text-gray-800">10</span>
       </li>
     </ul>
 
@@ -38,7 +38,7 @@
 
     <ul v-for="list in lists" :key="list.id" @click="selected = list.id">
       <li tabindex="0" :class="{ 'pl-8': list.subList }" 
-      class="group flex justify-between items-center h-8 rounded-lg px-2 my-1 cursor-pointer focus:bg-mana-100"
+      class="group flex justify-between items-center h-8 rounded-lg px-2 my-1 cursor-pointer settings hover:bg-mana-50 focus:bg-mana-100"
       @click="rotate(list)">
         <div class="text-gray-600 group-focus:font-sans-bold group-focus:text-gray-700 truncate ...">
           <i v-if="list.folder && !list.isOpen" class="far fa-folder pr-3 text-gray-600  group-focus:text-mana-200"></i>
@@ -47,15 +47,13 @@
           <span class="text-sm">{{list.title}}</span>
         </div>
         <div class="flex items-center pl-2">
-          <div class="settings">
-            <span v-if="!list.folder" class="text-gray-600 group-focus:text-gray-800 count">
-              {{list.tasks}}
-            </span>
-            <span else class="text-gray-600 group-focus:text-gray-800 count">
-              {{totalTasks(list.sublists)}}
-            </span>
-            <i class="fas fa-ellipsis-h text-gray-600 menu"></i>
-          </div>
+          <span v-if="!list.folder" class="text-sm text-gray-600 group-focus:text-gray-800 count">
+            {{list.tasks}}
+          </span>
+          <span else class="text-sm text-gray-600 group-focus:text-gray-800 count">
+            {{totalTasks(list.sublists)}}
+          </span>
+          <i class="fas fa-ellipsis-h text-sm hover:text-mana-200 text-gray-600 menu"></i>
           <div :class="{'pl-2' : list.folder}">
             <i v-if="list.folder" class="fas fa-chevron-left fa-fw norm text-gray-600 " :class="{ rotate : list.isOpen }"></i>
           </div>
@@ -65,14 +63,14 @@
       </li>
       <div v-if="list.sublists && list.isOpen">
         <ul v-for="sublist in list.sublists" :key="sublist.id" @click="selected = sublist.id">
-        <li tabindex="0" class="group flex justify-between items-center h-8 rounded-lg px-2 pl-8 my-1 cursor-pointer focus:bg-mana-100"
+        <li tabindex="0" class="group flex justify-between items-center h-8 rounded-lg px-2 pl-8 my-1 cursor-pointer hover:bg-mana-50 focus:bg-mana-100"
         @click="rotate(sublist)">
           <div class="text-gray-600 group-focus:font-sans-bold group-focus:text-gray-700 truncate">
             <i class="fas fa-list-ul pr-3 text-gray-600 group-focus:text-mana-200"></i>
             <span class="text-sm">{{sublist.title}}</span>
           </div>
           <div class="flex items-center pl-2">
-            <span class="text-gray-600 group-focus:text-gray-800">
+            <span class="text-sm text-gray-600 group-focus:text-gray-800">
               {{sublist.tasks}}
             </span>
           </div>

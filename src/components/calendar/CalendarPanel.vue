@@ -1,6 +1,6 @@
 <template>
   <section id="calendar-panel">
-
+    
   </section>
 </template>
 

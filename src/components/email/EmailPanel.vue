@@ -7,7 +7,7 @@
 		</div>
 
 		<ul>
-			<li tabindex="0" class="group flex justify-between items-center focus:bg-mana-100 h-8 rounded-lg cursor-pointer px-2 ">
+			<li tabindex="0" class="group flex justify-between items-center hover:bg-mana-50 focus:bg-mana-100 h-8 rounded-lg cursor-pointer px-2 ">
 				<!-- <router-link to="/inbox" class="group w-full focus:bg-mana-100 rounded-lg"> -->
 					<div class="text-gray-600 group-focus:text-gray-600 group-focus:font-sans-bold">
 						<i class="fas fa-inbox pr-8 text-gray-600 group-focus:text-mana-200"></i>
@@ -18,7 +18,7 @@
 					<span class="text-gray-600 group-focus:text-gray-800">27</span>
 				<!-- </router-link> -->
 			</li>
-			<li tabindex="0" class="group flex justify-between items-center focus:bg-mana-100 h-8 rounded-lg cursor-pointer px-2 ">
+			<li tabindex="0" class="group flex justify-between items-center hover:bg-mana-50 focus:bg-mana-100 h-8 rounded-lg cursor-pointer px-2 ">
 
 				<!-- <router-link to="/starred"> -->
 					<div class="text-gray-600 group-focus:text-gray-600 group-focus:font-sans-bold">
@@ -30,7 +30,7 @@
 					<span class="text-gray-600 group-focus:text-gray-800">5</span>
 
 				<!-- </router-link> -->
-			<li tabindex="0" class="group flex justify-between items-center focus:bg-mana-100 h-8 rounded-lg cursor-pointer px-2 ">
+			<li tabindex="0" class="group flex justify-between items-center hover:bg-mana-50 focus:bg-mana-100 h-8 rounded-lg cursor-pointer px-2 ">
 
 
 			<!-- <router-link to="/snoozed"> -->
@@ -43,7 +43,7 @@
 				<span class="text-gray-600 group-focus:text-gray-800">3</span>
 
 			<!-- </router-link> -->
-			<li tabindex="0" class="group flex justify-between items-center focus:bg-mana-100 h-8 rounded-lg cursor-pointer px-2 ">
+			<li tabindex="0" class="group flex justify-between items-center hover:bg-mana-50 focus:bg-mana-100 h-8 rounded-lg cursor-pointer px-2 ">
 
 
 				<!-- <router-link to="/sent"> -->
@@ -57,7 +57,7 @@
 
 				<!-- </router-link> -->
 			</li>
-			<li tabindex="0" class="group flex justify-between items-center focus:bg-mana-100 h-8 rounded-lg cursor-pointer px-2 ">
+			<li tabindex="0" class="group flex justify-between items-center hover:bg-mana-50 focus:bg-mana-100 h-8 rounded-lg cursor-pointer px-2 ">
 
 
 				<!-- <router-link to="/drafts"> -->

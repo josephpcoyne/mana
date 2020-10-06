@@ -1,15 +1,26 @@
 <template>
 	<section id="chat-panel">
-		<div class="flex items-center m-2 my-4" v-for="user in users" :key="user.id">
-			<div class="notification">
-				<img class="w-10 h-10 rounded-full mr-5" src="@/assets/mp1.png" alt="Chat Avatar" />
-				<span class="badge">3</span>
-			</div>
-			<div class="text-sm">
-				<p class="text-gray-900 leading-none">{{ user.name }}</p>
-				<p class="text-gray-600 truncate">Lorem ipsum dolor</p>
-			</div>
+		<div class="mb-8 py-3 ">
+			<button
+				class="flex m-auto font-bold py-2 px-4 rounded-lg shadow active:shadow-inner hover:text-mana-200 active:text-blue-200 text-sm text-gray-500">
+				New Message
+			</button>
 		</div>
+		<ul v-for="user in users" :key="user.id">
+			<li tabindex="0" class="flex items-center justify-between rounded-lg cursor-pointer px-2 mb-4 hover:bg-mana-50 focus:bg-mana-100" >
+				<div  class="flex items-center truncate">
+					<img class="w-10 h-10 rounded-full mr-4 " src="@/assets/mp1.png" alt="Avatar">
+					<div class="text-sm">
+						<p class="text-gray-900 leading-none">{{ user.name }}</p>
+						<p class="text-gray-600 ">Lorem ipsum dolor something</p>
+					</div>
+				</div>
+				<!-- <div class="notification">
+					<img class="w-10 h-10 rounded-full mr-5" src="@/assets/mp1.png" alt="Chat Avatar" />
+					<span class="badge">3</span>
+				</div> -->
+			</li>
+		</ul>
 	</section>
 </template>
 
